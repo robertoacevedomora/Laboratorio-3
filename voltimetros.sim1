@@ -1,0 +1,327 @@
+<circuit version="1.0.0-RC3" rev="1148" stepSize="1000000" stepsPS="1000000" NLsteps="100000" reaStep="1000000" animate="0" >
+
+<item itemtype="Ground" CircId="Ground-3707" mainComp="false" Show_id="false" Show_Val="false" Pos="-372,544" rotation="0" hflip="1" vflip="1" label="Ground-3697" idLabPos="-16,8" labelrot="0" valLabPos="0,0" valLabRot="0" />
+
+<item itemtype="Resistor" CircId="Resistor-3706" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-236,524" rotation="0" hflip="1" vflip="1" label="Resistor-3688" idLabPos="-12,-20" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="25 kΩ" />
+
+<item itemtype="Resistor" CircId="Resistor-3704" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-324,524" rotation="0" hflip="1" vflip="1" label="Resistor-3689" idLabPos="-12,-20" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="5 kΩ" />
+
+<item itemtype="Probe" CircId="Probe-3703" mainComp="false" Show_id="false" Show_Val="true" Pos="-832,260" rotation="-45" hflip="1" vflip="1" label="Probe-3703" idLabPos="16,-16" labelrot="45" valLabPos="16,0" valLabRot="45" ShowVolt="true" Threshold="2.5 V" />
+
+<item itemtype="Probe" CircId="Probe-3702" mainComp="false" Show_id="false" Show_Val="true" Pos="-456,212" rotation="-45" hflip="1" vflip="1" label="Probe-3702" idLabPos="16,-16" labelrot="45" valLabPos="16,0" valLabRot="45" ShowVolt="true" Threshold="2.5 V" />
+
+<item itemtype="Ground" CircId="Ground-3697" mainComp="false" Show_id="false" Show_Val="false" Pos="-360,256" rotation="0" hflip="1" vflip="1" label="Ground-3697" idLabPos="-16,8" labelrot="0" valLabPos="0,0" valLabRot="0" />
+
+<item itemtype="Resistor" CircId="Resistor-3689" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-312,236" rotation="0" hflip="1" vflip="1" label="Resistor-3689" idLabPos="-12,-20" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="5 kΩ" />
+
+<item itemtype="Resistor" CircId="Resistor-3688" mainComp="false" ShowProp="Resistance" Show_id="false" Show_Val="true" Pos="-224,236" rotation="0" hflip="1" vflip="1" label="Resistor-3688" idLabPos="-12,-20" labelrot="0" valLabPos="-16,6" valLabRot="0" Resistance="25 kΩ" />
+
+<item itemtype="Probe" CircId="Probe-3687" mainComp="false" Show_id="false" Show_Val="true" Pos="-452,136" rotation="-45" hflip="1" vflip="1" label="Probe-3687" idLabPos="16,-16" labelrot="45" valLabPos="16,0" valLabRot="45" ShowVolt="true" Threshold="2.5 V" />
+
+<item itemtype="Pcd8544" CircId="Pcd8544-3576" mainComp="false" Show_id="true" Show_Val="false" Pos="-1000,36" rotation="0" hflip="1" vflip="1" label="Pcd8544-3576" idLabPos="-32,-66" labelrot="0" valLabPos="0,0" valLabRot="0" />
+
+<item itemtype="opAmp" CircId="opAmp-3564" mainComp="false" Show_id="false" Show_Val="false" Pos="-848,332" rotation="-90" hflip="1" vflip="1" label="opAmp-3525" idLabPos="-16,-32" labelrot="0" valLabPos="0,0" valLabRot="0" Gain="1000" Out_Imped="1e-14 Ω" Volt_Pos="5 V" Volt_Neg="0 V" Power_Pins="false" Switch_Pins="false" />
+
+<item itemtype="opAmp" CircId="opAmp-3563" mainComp="false" Show_id="false" Show_Val="false" Pos="-780,332" rotation="-90" hflip="1" vflip="1" label="opAmp-3525" idLabPos="-16,-32" labelrot="0" valLabPos="0,0" valLabRot="0" Gain="1000" Out_Imped="1e-14 Ω" Volt_Pos="5 V" Volt_Neg="0 V" Power_Pins="false" Switch_Pins="false" />
+
+<item itemtype="opAmp" CircId="opAmp-3552" mainComp="false" Show_id="false" Show_Val="false" Pos="-824,184" rotation="0" hflip="1" vflip="1" label="opAmp-3525" idLabPos="-16,-32" labelrot="0" valLabPos="0,0" valLabRot="0" Gain="1000" Out_Imped="1e-14 Ω" Volt_Pos="5 V" Volt_Neg="0 V" Power_Pins="false" Switch_Pins="false" />
+
+<item itemtype="Switch" CircId="Switch-35" mainComp="false" Show_id="false" Show_Val="false" Pos="-808,-28" rotation="270" hflip="1" vflip="1" label="Switch-992" idLabPos="-16,-24" labelrot="0" valLabPos="0,0" valLabRot="0" Norm_Close="false" DT="false" Poles="1 _Poles" />
+
+<item itemtype="WaveGen" CircId="WaveGen-32" mainComp="false" Show_id="false" Show_Val="true" Pos="-808,-80" rotation="90" hflip="1" vflip="1" label="WaveGen-966" idLabPos="-64,-24" labelrot="0" valLabPos="-50,13" valLabRot="-90" Out="true" Running="true" Wave_Type="Sine" Freq="1 Hz" Steps="100 _Steps" Duty="50 _%" Always_On="false" Semi_Ampli="2.5 V" Mid_Volt="2.5 V" />
+
+<item itemtype="Voltage Source" CircId="Voltage Source-31" mainComp="false" ShowProp="MaxValue" Show_id="false" Show_Val="true" Pos="-744,-72" rotation="0" hflip="1" vflip="1" label="Voltage Source-93" idLabPos="-40,-80" labelrot="0" valLabPos="-19,-76" valLabRot="0" Value_Volt="0 V" MaxValue="5 V" />
+
+<item itemtype="Probe" CircId="Probe-30" mainComp="false" Show_id="false" Show_Val="true" Pos="-716,0" rotation="-45" hflip="1" vflip="1" label="Probe-4420" idLabPos="16,-16" labelrot="45" valLabPos="16,0" valLabRot="45" ShowVolt="true" Threshold="2.5 V" />
+
+<item itemtype="Probe" CircId="Probe-29" mainComp="false" Show_id="false" Show_Val="true" Pos="-868,-52" rotation="-45" hflip="1" vflip="1" label="Probe-4419" idLabPos="16,-16" labelrot="45" valLabPos="16,0" valLabRot="45" ShowVolt="true" Threshold="2.5 V" />
+
+<item itemtype="Switch" CircId="Switch-28" mainComp="false" Show_id="false" Show_Val="false" Pos="-848,-28" rotation="90" hflip="1" vflip="1" label="Switch-992" idLabPos="-16,-24" labelrot="0" valLabPos="0,0" valLabRot="0" Norm_Close="false" DT="false" Poles="1 _Poles" />
+
+<item itemtype="Probe" CircId="Probe-27" mainComp="false" Show_id="false" Show_Val="true" Pos="-808,-4" rotation="-45" hflip="1" vflip="1" label="Probe-4421" idLabPos="16,-16" labelrot="45" valLabPos="16,0" valLabRot="45" ShowVolt="true" Threshold="2.5 V" />
+
+<item itemtype="Voltage Source" CircId="Voltage Source-24" mainComp="false" ShowProp="MaxValue" Show_id="false" Show_Val="true" Pos="-900,-80" rotation="0" hflip="1" vflip="1" label="Voltage Source-93" idLabPos="-40,-80" labelrot="0" valLabPos="-22,-79" valLabRot="0" Value_Volt="0 V" MaxValue="5 V" />
+
+<item itemtype="Switch" CircId="Switch-23" mainComp="false" Show_id="false" Show_Val="false" Pos="-776,24" rotation="0" hflip="1" vflip="1" label="Switch-404" idLabPos="-16,-24" labelrot="0" valLabPos="0,0" valLabRot="0" Norm_Close="false" DT="false" Poles="1 _Poles" />
+
+<item itemtype="Switch" CircId="Switch-21" mainComp="false" Show_id="false" Show_Val="false" Pos="-860,24" rotation="0" hflip="1" vflip="1" label="Switch-404" idLabPos="-16,-24" labelrot="0" valLabPos="0,0" valLabRot="0" Norm_Close="false" DT="false" Poles="1 _Poles" />
+
+<item itemtype="WaveGen" CircId="WaveGen-20" mainComp="false" Show_id="false" Show_Val="true" Pos="-848,-80" rotation="90" hflip="1" vflip="1" label="WaveGen-966" idLabPos="-64,-24" labelrot="0" valLabPos="-47,9" valLabRot="-90" Out="true" Running="true" Wave_Type="Sine" Freq="1 Hz" Steps="100 _Steps" Duty="50 _%" Always_On="false" Semi_Ampli="2.5 V" Mid_Volt="2.5 V" />
+
+<item itemtype="Subcircuit" CircId="Uno-1" mainComp="false" Show_id="true" Show_Val="false" Pos="-736,88" rotation="0" hflip="1" vflip="1" label="Arduino Uno-1" idLabPos="100,-21" labelrot="0" valLabPos="0,0" valLabRot="0" Logic_Symbol="false">
+<mainCompProps itemtype="MCU" CircId="1_mega328-109" mainComp="true" Show_id="false" Show_Val="false" Pos="20,20" rotation="0" hflip="1" vflip="1" label="1_mega328-109" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" Frequency="16 MHz" Program="build/arduino.avr.uno/voltimetros.ino.hex" Auto_Load="false" Rst_enabled="true" Ext_Osc="true" Wdt_enabled="false" />
+</item>
+
+<item itemtype="Probe" CircId="Probe-103" mainComp="false" Show_id="false" Show_Val="true" Pos="-704,56" rotation="-45" hflip="1" vflip="1" label="Probe-103" idLabPos="16,-16" labelrot="45" valLabPos="16,0" valLabRot="45" ShowVolt="true" Threshold="2.5 V" />
+
+<item itemtype="Voltage Source" CircId="Voltage Source-104" mainComp="false" ShowProp="MaxValue" Show_id="false" Show_Val="true" Pos="-432,-72" rotation="0" hflip="1" vflip="1" label="Voltage Source-93" idLabPos="-40,-80" labelrot="0" valLabPos="-19,-76" valLabRot="0" Value_Volt="0 V" MaxValue="5 V" />
+
+<item itemtype="Switch" CircId="Switch-105" mainComp="false" Show_id="false" Show_Val="false" Pos="-548,24" rotation="0" hflip="1" vflip="1" label="Switch-404" idLabPos="-16,-24" labelrot="0" valLabPos="0,0" valLabRot="0" Norm_Close="false" DT="false" Poles="1 _Poles" />
+
+<item itemtype="WaveGen" CircId="WaveGen-106" mainComp="false" Show_id="false" Show_Val="true" Pos="-536,-80" rotation="90" hflip="1" vflip="1" label="WaveGen-966" idLabPos="-64,-24" labelrot="0" valLabPos="-47,9" valLabRot="-90" Out="false" Running="false" Wave_Type="Sine" Freq="1 Hz" Steps="100 _Steps" Duty="50 _%" Always_On="false" Semi_Ampli="2.5 V" Mid_Volt="2.5 V" />
+
+<item itemtype="Voltage Source" CircId="Voltage Source-107" mainComp="false" ShowProp="MaxValue" Show_id="false" Show_Val="true" Pos="-588,-80" rotation="0" hflip="1" vflip="1" label="Voltage Source-93" idLabPos="-40,-80" labelrot="0" valLabPos="-22,-79" valLabRot="0" Value_Volt="0 V" MaxValue="5 V" />
+
+<item itemtype="Probe" CircId="Probe-108" mainComp="false" Show_id="false" Show_Val="true" Pos="-404,0" rotation="-45" hflip="1" vflip="1" label="Probe-4420" idLabPos="16,-16" labelrot="45" valLabPos="16,0" valLabRot="45" ShowVolt="true" Threshold="2.5 V" />
+
+<item itemtype="Switch" CircId="Switch-109" mainComp="false" Show_id="false" Show_Val="false" Pos="-464,24" rotation="0" hflip="1" vflip="1" label="Switch-404" idLabPos="-16,-24" labelrot="0" valLabPos="0,0" valLabRot="0" Norm_Close="false" DT="false" Poles="1 _Poles" />
+
+<item itemtype="Switch" CircId="Switch-112" mainComp="false" Show_id="false" Show_Val="false" Pos="-496,-28" rotation="270" hflip="1" vflip="1" label="Switch-992" idLabPos="-16,-24" labelrot="0" valLabPos="0,0" valLabRot="0" Norm_Close="false" DT="false" Poles="1 _Poles" />
+
+<item itemtype="Probe" CircId="Probe-113" mainComp="false" Show_id="false" Show_Val="true" Pos="-488,64" rotation="-45" hflip="1" vflip="1" label="Probe-4421" idLabPos="16,-16" labelrot="45" valLabPos="16,0" valLabRot="45" ShowVolt="true" Threshold="2.5 V" />
+
+<item itemtype="Probe" CircId="Probe-114" mainComp="false" Show_id="false" Show_Val="true" Pos="-556,-52" rotation="-45" hflip="1" vflip="1" label="Probe-4419" idLabPos="16,-16" labelrot="45" valLabPos="16,0" valLabRot="45" ShowVolt="true" Threshold="2.5 V" />
+
+<item itemtype="WaveGen" CircId="WaveGen-115" mainComp="false" Show_id="false" Show_Val="true" Pos="-496,-80" rotation="90" hflip="1" vflip="1" label="WaveGen-966" idLabPos="-64,-24" labelrot="0" valLabPos="-50,13" valLabRot="-90" Out="false" Running="false" Wave_Type="Sine" Freq="1 Hz" Steps="100 _Steps" Duty="50 _%" Always_On="false" Semi_Ampli="2.5 V" Mid_Volt="2.5 V" />
+
+<item itemtype="Probe" CircId="Probe-116" mainComp="false" Show_id="false" Show_Val="true" Pos="-408,44" rotation="-45" hflip="1" vflip="1" label="Probe-103" idLabPos="16,-16" labelrot="45" valLabPos="16,0" valLabRot="45" ShowVolt="true" Threshold="2.5 V" />
+
+<item itemtype="Switch" CircId="Switch-117" mainComp="false" Show_id="false" Show_Val="false" Pos="-536,-28" rotation="90" hflip="1" vflip="1" label="Switch-992" idLabPos="-16,-24" labelrot="0" valLabPos="0,0" valLabRot="0" Norm_Close="false" DT="false" Poles="1 _Poles" />
+
+<item itemtype="Voltage Source" CircId="Voltage Source-136" mainComp="false" ShowProp="MaxValue" Show_id="false" Show_Val="true" Pos="-100,104" rotation="0" hflip="1" vflip="1" label="Voltage Source-93" idLabPos="-40,-80" labelrot="0" valLabPos="-19,-76" valLabRot="0" Value_Volt="0 V" MaxValue="5 V" />
+
+<item itemtype="Switch" CircId="Switch-137" mainComp="false" Show_id="false" Show_Val="false" Pos="-216,200" rotation="0" hflip="1" vflip="1" label="Switch-404" idLabPos="-16,-24" labelrot="0" valLabPos="0,0" valLabRot="0" Norm_Close="false" DT="false" Poles="1 _Poles" />
+
+<item itemtype="WaveGen" CircId="WaveGen-138" mainComp="false" Show_id="false" Show_Val="true" Pos="-204,96" rotation="90" hflip="1" vflip="1" label="WaveGen-966" idLabPos="-64,-24" labelrot="0" valLabPos="-47,9" valLabRot="-90" Out="false" Running="false" Wave_Type="Sine" Freq="1 Hz" Steps="100 _Steps" Duty="50 _%" Always_On="false" Semi_Ampli="2.5 V" Mid_Volt="2.5 V" />
+
+<item itemtype="Voltage Source" CircId="Voltage Source-139" mainComp="false" ShowProp="MaxValue" Show_id="false" Show_Val="true" Pos="-256,96" rotation="0" hflip="1" vflip="1" label="Voltage Source-93" idLabPos="-40,-80" labelrot="0" valLabPos="-22,-79" valLabRot="0" Value_Volt="0.9 V" MaxValue="5 V" />
+
+<item itemtype="Probe" CircId="Probe-140" mainComp="false" Show_id="false" Show_Val="true" Pos="-72,176" rotation="-45" hflip="1" vflip="1" label="Probe-4420" idLabPos="16,-16" labelrot="45" valLabPos="16,0" valLabRot="45" ShowVolt="true" Threshold="2.5 V" />
+
+<item itemtype="Switch" CircId="Switch-141" mainComp="false" Show_id="false" Show_Val="false" Pos="-132,200" rotation="0" hflip="1" vflip="1" label="Switch-404" idLabPos="-16,-24" labelrot="0" valLabPos="0,0" valLabRot="0" Norm_Close="false" DT="false" Poles="1 _Poles" />
+
+<item itemtype="Switch" CircId="Switch-144" mainComp="false" Show_id="false" Show_Val="false" Pos="-164,148" rotation="270" hflip="1" vflip="1" label="Switch-992" idLabPos="-16,-24" labelrot="0" valLabPos="0,0" valLabRot="0" Norm_Close="false" DT="false" Poles="1 _Poles" />
+
+<item itemtype="Probe" CircId="Probe-145" mainComp="false" Show_id="false" Show_Val="true" Pos="-172,172" rotation="-45" hflip="1" vflip="1" label="Probe-4421" idLabPos="16,-16" labelrot="45" valLabPos="16,0" valLabRot="45" ShowVolt="true" Threshold="2.5 V" />
+
+<item itemtype="Probe" CircId="Probe-146" mainComp="false" Show_id="false" Show_Val="true" Pos="-224,124" rotation="-45" hflip="1" vflip="1" label="Probe-4419" idLabPos="16,-16" labelrot="45" valLabPos="16,0" valLabRot="45" ShowVolt="true" Threshold="2.5 V" />
+
+<item itemtype="WaveGen" CircId="WaveGen-147" mainComp="false" Show_id="false" Show_Val="true" Pos="-164,96" rotation="90" hflip="1" vflip="1" label="WaveGen-966" idLabPos="-64,-24" labelrot="0" valLabPos="-50,13" valLabRot="-90" Out="false" Running="false" Wave_Type="Sine" Freq="1 Hz" Steps="100 _Steps" Duty="50 _%" Always_On="false" Semi_Ampli="2.5 V" Mid_Volt="2.5 V" />
+
+<item itemtype="Probe" CircId="Probe-148" mainComp="false" Show_id="false" Show_Val="true" Pos="-76,220" rotation="-45" hflip="1" vflip="1" label="Probe-103" idLabPos="16,-16" labelrot="45" valLabPos="16,0" valLabRot="45" ShowVolt="true" Threshold="2.5 V" />
+
+<item itemtype="Switch" CircId="Switch-149" mainComp="false" Show_id="false" Show_Val="false" Pos="-204,148" rotation="90" hflip="1" vflip="1" label="Switch-992" idLabPos="-16,-24" labelrot="0" valLabPos="0,0" valLabRot="0" Norm_Close="false" DT="false" Poles="1 _Poles" />
+
+<item itemtype="Voltage Source" CircId="Voltage Source-164" mainComp="false" ShowProp="MaxValue" Show_id="false" Show_Val="true" Pos="-104,372" rotation="0" hflip="1" vflip="1" label="Voltage Source-93" idLabPos="-40,-80" labelrot="0" valLabPos="-19,-76" valLabRot="0" Value_Volt="3.6 V" MaxValue="5 V" />
+
+<item itemtype="Switch" CircId="Switch-165" mainComp="false" Show_id="false" Show_Val="false" Pos="-220,468" rotation="0" hflip="1" vflip="1" label="Switch-404" idLabPos="-16,-24" labelrot="0" valLabPos="0,0" valLabRot="0" Norm_Close="false" DT="false" Poles="1 _Poles" />
+
+<item itemtype="WaveGen" CircId="WaveGen-166" mainComp="false" Show_id="false" Show_Val="true" Pos="-208,364" rotation="90" hflip="1" vflip="1" label="WaveGen-966" idLabPos="-64,-24" labelrot="0" valLabPos="-47,9" valLabRot="-90" Out="true" Running="true" Wave_Type="Sine" Freq="1 Hz" Steps="100 _Steps" Duty="50 _%" Always_On="false" Semi_Ampli="0 V" Mid_Volt="-15 V" />
+
+<item itemtype="Voltage Source" CircId="Voltage Source-167" mainComp="false" ShowProp="MaxValue" Show_id="false" Show_Val="true" Pos="-260,364" rotation="0" hflip="1" vflip="1" label="Voltage Source-93" idLabPos="-40,-80" labelrot="0" valLabPos="-22,-79" valLabRot="0" Value_Volt="-30 V" MaxValue="-30 V" />
+
+<item itemtype="Probe" CircId="Probe-168" mainComp="false" Show_id="false" Show_Val="true" Pos="-76,444" rotation="-45" hflip="1" vflip="1" label="Probe-4420" idLabPos="16,-16" labelrot="45" valLabPos="16,0" valLabRot="45" ShowVolt="true" Threshold="2.5 V" />
+
+<item itemtype="Switch" CircId="Switch-169" mainComp="false" Show_id="false" Show_Val="false" Pos="-136,468" rotation="0" hflip="1" vflip="1" label="Switch-404" idLabPos="-16,-24" labelrot="0" valLabPos="0,0" valLabRot="0" Norm_Close="false" DT="false" Poles="1 _Poles" />
+
+<item itemtype="Switch" CircId="Switch-172" mainComp="false" Show_id="false" Show_Val="false" Pos="-168,416" rotation="270" hflip="1" vflip="1" label="Switch-992" idLabPos="-16,-24" labelrot="0" valLabPos="0,0" valLabRot="0" Norm_Close="false" DT="false" Poles="1 _Poles" />
+
+<item itemtype="Probe" CircId="Probe-173" mainComp="false" Show_id="false" Show_Val="true" Pos="-176,440" rotation="-45" hflip="1" vflip="1" label="Probe-4421" idLabPos="16,-16" labelrot="45" valLabPos="16,0" valLabRot="45" ShowVolt="true" Threshold="2.5 V" />
+
+<item itemtype="Probe" CircId="Probe-174" mainComp="false" Show_id="false" Show_Val="true" Pos="-364,460" rotation="-45" hflip="1" vflip="1" label="Probe-4419" idLabPos="16,-16" labelrot="45" valLabPos="16,0" valLabRot="45" ShowVolt="true" Threshold="2.5 V" />
+
+<item itemtype="WaveGen" CircId="WaveGen-175" mainComp="false" Show_id="false" Show_Val="true" Pos="-168,364" rotation="90" hflip="1" vflip="1" label="WaveGen-966" idLabPos="-64,-24" labelrot="0" valLabPos="-50,13" valLabRot="-90" Out="true" Running="true" Wave_Type="Sine" Freq="1 Hz" Steps="100 _Steps" Duty="50 _%" Always_On="false" Semi_Ampli="2.5 V" Mid_Volt="2.5 V" />
+
+<item itemtype="Probe" CircId="Probe-176" mainComp="false" Show_id="false" Show_Val="true" Pos="-80,488" rotation="-45" hflip="1" vflip="1" label="Probe-103" idLabPos="16,-16" labelrot="45" valLabPos="16,0" valLabRot="45" ShowVolt="true" Threshold="2.5 V" />
+
+<item itemtype="Switch" CircId="Switch-177" mainComp="false" Show_id="false" Show_Val="false" Pos="-208,416" rotation="90" hflip="1" vflip="1" label="Switch-992" idLabPos="-16,-24" labelrot="0" valLabPos="0,0" valLabRot="0" Norm_Close="false" DT="false" Poles="1 _Poles" />
+
+<item itemtype="Probe" CircId="Probe-3523" mainComp="false" Show_id="false" Show_Val="true" Pos="-872,84" rotation="-45" hflip="1" vflip="1" label="Probe-3523" idLabPos="16,-16" labelrot="45" valLabPos="16,0" valLabRot="45" ShowVolt="true" Threshold="2.5 V" />
+
+<item itemtype="Probe" CircId="Probe-3524" mainComp="false" Show_id="false" Show_Val="true" Pos="-768,100" rotation="-45" hflip="1" vflip="1" label="Probe-3524" idLabPos="16,-16" labelrot="45" valLabPos="16,0" valLabRot="45" ShowVolt="true" Threshold="2.5 V" />
+
+<item itemtype="opAmp" CircId="opAmp-3525" mainComp="false" Show_id="false" Show_Val="false" Pos="-828,116" rotation="0" hflip="1" vflip="1" label="opAmp-3525" idLabPos="-16,-32" labelrot="0" valLabPos="0,0" valLabRot="0" Gain="1000" Out_Imped="1e-14 Ω" Volt_Pos="5 V" Volt_Neg="0 V" Power_Pins="false" Switch_Pins="false" />
+
+<item itemtype="Led" CircId="Led-3616" mainComp="false" Show_id="false" Show_Val="false" Pos="-920,248" rotation="90" hflip="1" vflip="1" label="Led-3616" idLabPos="-16,-24" labelrot="0" valLabPos="0,0" valLabRot="0" Color="Yellow" Grounded="false" Threshold="2.4 V" MaxCurrent="0.03 A" Resistance="0.6 Ω" />
+
+<item itemtype="Ground" CircId="Ground-3618" mainComp="false" Show_id="false" Show_Val="false" Pos="-920,320" rotation="0" hflip="1" vflip="1" label="Ground-3618" idLabPos="-16,8" labelrot="0" valLabPos="0,0" valLabRot="0" />
+
+<item itemtype="Probe" CircId="Probe-3652" mainComp="false" Show_id="false" Show_Val="true" Pos="-952,88" rotation="-45" hflip="1" vflip="1" label="Probe-3652" idLabPos="16,-16" labelrot="45" valLabPos="16,0" valLabRot="45" ShowVolt="true" Threshold="2.5 V" />
+
+<item itemtype="Fixed Voltage" CircId="Fixed Voltage-3766" mainComp="false" Show_id="false" Show_Val="true" Pos="-1172,176" rotation="0" hflip="1" vflip="1" label="Fixed Voltage-3766" idLabPos="-64,-24" labelrot="0" valLabPos="-16,8" valLabRot="0" Out="true" Voltage="5 V" />
+
+<item itemtype="Switch" CircId="Switch-3767" mainComp="false" Show_id="false" Show_Val="false" Pos="-1104,176" rotation="0" hflip="1" vflip="1" label="Switch-3767" idLabPos="-16,-24" labelrot="0" valLabPos="0,0" valLabRot="0" Norm_Close="false" DT="false" Poles="1 _Poles" />
+
+<item itemtype="Node" CircId="Node-3723" mainComp="false" Pos="-180,468" />
+
+<item itemtype="Node" CircId="Node-3720" mainComp="false" Pos="-620,416" />
+
+<item itemtype="Node" CircId="Node-3717" mainComp="false" Pos="-276,524" />
+
+<item itemtype="Node" CircId="Node-3700" mainComp="false" Pos="-188,196" />
+
+<item itemtype="Node" CircId="Node-3694" mainComp="false" Pos="-428,272" />
+
+<item itemtype="Node" CircId="Node-3691" mainComp="false" Pos="-264,236" />
+
+<item itemtype="Node" CircId="Node-3554" mainComp="false" Pos="-504,52" />
+
+<item itemtype="Node" CircId="Node-36" mainComp="false" Pos="-832,24" />
+
+<item itemtype="Node" CircId="Node-19" mainComp="false" Pos="-832,-12" />
+
+<item itemtype="Node" CircId="Node-110" mainComp="false" Pos="-520,-12" />
+
+<item itemtype="Node" CircId="Node-111" mainComp="false" Pos="-520,24" />
+
+<item itemtype="Node" CircId="Node-142" mainComp="false" Pos="-188,164" />
+
+<item itemtype="Node" CircId="Node-143" mainComp="false" Pos="-188,200" />
+
+<item itemtype="Node" CircId="Node-170" mainComp="false" Pos="-192,432" />
+
+<item itemtype="Node" CircId="Node-171" mainComp="false" Pos="-192,468" />
+
+<item itemtype="Node" CircId="Node-200" mainComp="false" Pos="-820,24" />
+
+<item itemtype="Node" CircId="Node-203" mainComp="false" Pos="-504,24" />
+
+<item itemtype="Node" CircId="Node-3529" mainComp="false" Pos="-816,64" />
+
+<item itemtype="Connector" uid="Connector-41" startpinid="Voltage Source-24-outPin" endpinid="Switch-21-pinP0" pointList="-872,-64,-884,-80,-884,24,-876,24" />
+
+<item itemtype="Connector" uid="Connector-44" startpinid="Switch-28-switch0pinN" endpinid="Node-19-0" pointList="-848,-12,-832,-12" />
+
+<item itemtype="Connector" uid="Connector-45" startpinid="Node-36-2" endpinid="Switch-21-switch0pinN" pointList="-832,24,-844,24" />
+
+<item itemtype="Connector" uid="Connector-50" startpinid="WaveGen-32-outnod" endpinid="Switch-35-switch0pinN" pointList="-808,-64,-808,-44" />
+
+<item itemtype="Connector" uid="Connector-53" startpinid="Node-19-2" endpinid="Switch-35-pinP0" pointList="-832,-12,-808,-12" />
+
+<item itemtype="Connector" uid="Connector-55" startpinid="Switch-23-switch0pinN" endpinid="Voltage Source-31-outPin" pointList="-760,24,-716,24,-716,-56" />
+
+<item itemtype="Connector" uid="Connector-47" startpinid="WaveGen-20-outnod" endpinid="Switch-28-pinP0" pointList="-848,-64,-848,-44" />
+
+<item itemtype="Connector" uid="Connector-118" startpinid="Switch-109-pinP0" endpinid="Node-203-0" pointList="-480,24,-504,24" />
+
+<item itemtype="Connector" uid="Connector-120" startpinid="Node-111-2" endpinid="Switch-105-switch0pinN" pointList="-520,24,-532,24" />
+
+<item itemtype="Connector" uid="Connector-121" startpinid="Switch-117-switch0pinN" endpinid="Node-110-0" pointList="-536,-12,-520,-12" />
+
+<item itemtype="Connector" uid="Connector-122" startpinid="Switch-109-switch0pinN" endpinid="Voltage Source-104-outPin" pointList="-448,24,-404,24,-404,-56" />
+
+<item itemtype="Connector" uid="Connector-124" startpinid="Voltage Source-107-outPin" endpinid="Switch-105-pinP0" pointList="-560,-64,-572,-80,-572,24,-564,24" />
+
+<item itemtype="Connector" uid="Connector-126" startpinid="WaveGen-106-outnod" endpinid="Switch-117-pinP0" pointList="-536,-64,-536,-44" />
+
+<item itemtype="Connector" uid="Connector-128" startpinid="Node-110-2" endpinid="Switch-112-pinP0" pointList="-520,-12,-496,-12" />
+
+<item itemtype="Connector" uid="Connector-129" startpinid="Node-110-1" endpinid="Node-111-1" pointList="-520,-12,-520,24" />
+
+<item itemtype="Connector" uid="Connector-130" startpinid="WaveGen-115-outnod" endpinid="Switch-112-switch0pinN" pointList="-496,-64,-496,-44" />
+
+<item itemtype="Connector" uid="Connector-152" startpinid="Node-143-2" endpinid="Switch-137-switch0pinN" pointList="-188,200,-200,200" />
+
+<item itemtype="Connector" uid="Connector-153" startpinid="Switch-149-switch0pinN" endpinid="Node-142-0" pointList="-204,164,-188,164" />
+
+<item itemtype="Connector" uid="Connector-154" startpinid="Switch-141-switch0pinN" endpinid="Voltage Source-136-outPin" pointList="-116,200,-72,200,-72,120" />
+
+<item itemtype="Connector" uid="Connector-156" startpinid="Voltage Source-139-outPin" endpinid="Switch-137-pinP0" pointList="-228,112,-240,96,-240,200,-232,200" />
+
+<item itemtype="Connector" uid="Connector-158" startpinid="WaveGen-138-outnod" endpinid="Switch-149-pinP0" pointList="-204,112,-204,132" />
+
+<item itemtype="Connector" uid="Connector-160" startpinid="Node-142-2" endpinid="Switch-144-pinP0" pointList="-188,164,-164,164" />
+
+<item itemtype="Connector" uid="Connector-161" startpinid="Node-142-1" endpinid="Node-3700-0" pointList="-188,164,-188,196" />
+
+<item itemtype="Connector" uid="Connector-162" startpinid="WaveGen-147-outnod" endpinid="Switch-144-switch0pinN" pointList="-164,112,-164,132" />
+
+<item itemtype="Connector" uid="Connector-180" startpinid="Node-171-2" endpinid="Switch-165-switch0pinN" pointList="-192,468,-204,468" />
+
+<item itemtype="Connector" uid="Connector-181" startpinid="Switch-177-switch0pinN" endpinid="Node-170-0" pointList="-208,432,-192,432" />
+
+<item itemtype="Connector" uid="Connector-182" startpinid="Switch-169-switch0pinN" endpinid="Voltage Source-164-outPin" pointList="-120,468,-76,468,-76,388" />
+
+<item itemtype="Connector" uid="Connector-184" startpinid="Voltage Source-167-outPin" endpinid="Switch-165-pinP0" pointList="-232,380,-244,364,-244,468,-236,468" />
+
+<item itemtype="Connector" uid="Connector-186" startpinid="WaveGen-166-outnod" endpinid="Switch-177-pinP0" pointList="-208,380,-208,400" />
+
+<item itemtype="Connector" uid="Connector-188" startpinid="Node-170-2" endpinid="Switch-172-pinP0" pointList="-192,432,-168,432" />
+
+<item itemtype="Connector" uid="Connector-189" startpinid="Node-170-1" endpinid="Node-171-1" pointList="-192,432,-192,468" />
+
+<item itemtype="Connector" uid="Connector-190" startpinid="WaveGen-175-outnod" endpinid="Switch-172-switch0pinN" pointList="-168,380,-168,400" />
+
+<item itemtype="Connector" uid="Connector-3487" startpinid="Node-19-1" endpinid="Node-36-1" pointList="-832,-12,-820,-12,-820,16,-832,16,-832,24" />
+
+<item itemtype="Connector" uid="Connector-3472" startpinid="Switch-23-pinP0" endpinid="Node-200-0" pointList="-792,24,-820,24" />
+
+<item itemtype="Connector" uid="Connector-201" startpinid="Node-200-2" endpinid="Node-36-0" pointList="-820,24,-832,24" />
+
+<item itemtype="Connector" uid="Connector-204" startpinid="Node-203-2" endpinid="Node-111-0" pointList="-504,24,-520,24" />
+
+<item itemtype="Connector" uid="Connector-205" startpinid="Node-203-1" endpinid="Node-3554-0" pointList="-504,24,-504,52" />
+
+<item itemtype="Connector" uid="Connector-202" startpinid="Node-200-1" endpinid="Node-3529-0" pointList="-820,24,-816,24,-816,64" />
+
+<item itemtype="Connector" uid="Connector-3530" startpinid="Node-3529-2" endpinid="Uno-1-A3" pointList="-816,64,-816,72,-548,72,-548,120,-584,120" />
+
+<item itemtype="Connector" uid="Connector-3531" startpinid="Node-3529-1" endpinid="opAmp-3525-inputNinv" pointList="-816,64,-888,64,-888,108,-852,108" />
+
+<item itemtype="Connector" uid="Connector-3551" startpinid="opAmp-3525-output" endpinid="Uno-1-8" pointList="-804,116,-764,116,-764,176,-728,176" />
+
+<item itemtype="Connector" uid="Connector-3555" startpinid="Node-3554-2" endpinid="Uno-1-A2" pointList="-504,52,-504,128,-584,128" />
+
+<item itemtype="Connector" uid="Connector-3556" startpinid="Node-3554-1" endpinid="opAmp-3552-inputNinv" pointList="-504,52,-928,52,-928,176,-848,176" />
+
+<item itemtype="Connector" uid="Connector-3557" startpinid="opAmp-3552-output" endpinid="Uno-1-9" pointList="-800,184,-728,184" />
+
+<item itemtype="Connector" uid="Connector-3571" startpinid="opAmp-3563-output" endpinid="Uno-1-10" pointList="-780,308,-780,192,-728,192" />
+
+<item itemtype="Connector" uid="Connector-3572" startpinid="opAmp-3564-output" endpinid="Uno-1-11" pointList="-848,308,-848,200,-728,200" />
+
+<item itemtype="Connector" uid="Connector-3617" startpinid="Uno-1-12" endpinid="Led-3616-lPin" pointList="-728,208,-920,208,-920,232" />
+
+<item itemtype="Connector" uid="Connector-3619" startpinid="Led-3616-rPin" endpinid="Ground-3618-Gnd" pointList="-920,264,-920,304" />
+
+<item itemtype="Connector" uid="Connector-3472" startpinid="Switch-141-pinP0" endpinid="Node-143-0" pointList="-148,200,-148,196,-168,196,-168,200,-188,200" />
+
+<item itemtype="Connector" uid="Connector-3570" startpinid="opAmp-3563-inputNinv" endpinid="Node-3694-0" pointList="-788,356,-788,392,-428,392,-428,272" />
+
+<item itemtype="Connector" uid="Connector-3690" startpinid="Resistor-3689-rPin" endpinid="Node-3691-0" pointList="-296,236,-264,236" />
+
+<item itemtype="Connector" uid="Connector-3692" startpinid="Node-3691-2" endpinid="Resistor-3688-lPin" pointList="-264,236,-240,236" />
+
+<item itemtype="Connector" uid="Connector-3693" startpinid="Node-3691-1" endpinid="Node-3694-1" pointList="-264,236,-264,272,-428,272" />
+
+<item itemtype="Connector" uid="Connector-3695" startpinid="Node-3694-2" endpinid="Uno-1-A1" pointList="-428,272,-428,252,-468,252,-468,136,-584,136" />
+
+<item itemtype="Connector" uid="Connector-3698" startpinid="Resistor-3689-lPin" endpinid="Ground-3697-Gnd" pointList="-328,236,-360,236,-360,240" />
+
+<item itemtype="Connector" uid="Connector-3699" startpinid="Resistor-3688-rPin" endpinid="Node-3700-1" pointList="-208,236,-188,236,-188,196" />
+
+<item itemtype="Connector" uid="Connector-3701" startpinid="Node-3700-2" endpinid="Node-143-1" pointList="-188,196,-188,200" />
+
+<item itemtype="Connector" uid="Connector-3710" startpinid="Resistor-3704-lPin" endpinid="Ground-3707-Gnd" pointList="-340,524,-372,524,-372,528" />
+
+<item itemtype="Connector" uid="Connector-3712" startpinid="Resistor-3704-rPin" endpinid="Node-3717-0" pointList="-308,524,-276,524" />
+
+<item itemtype="Connector" uid="Connector-3472" startpinid="Switch-169-pinP0" endpinid="Node-3723-0" pointList="-152,468,-180,468" />
+
+<item itemtype="Connector" uid="Connector-3573" startpinid="opAmp-3564-inputNinv" endpinid="Node-3720-0" pointList="-856,356,-856,416,-620,416" />
+
+<item itemtype="Connector" uid="Connector-3718" startpinid="Node-3717-2" endpinid="Resistor-3706-lPin" pointList="-276,524,-252,524" />
+
+<item itemtype="Connector" uid="Connector-3719" startpinid="Node-3717-1" endpinid="Node-3720-1" pointList="-276,524,-276,476,-620,476,-620,416" />
+
+<item itemtype="Connector" uid="Connector-3721" startpinid="Node-3720-2" endpinid="Uno-1-A0" pointList="-620,416,-520,416,-520,144,-584,144" />
+
+<item itemtype="Connector" uid="Connector-3722" startpinid="Resistor-3706-rPin" endpinid="Node-3723-1" pointList="-220,524,-180,524,-180,468" />
+
+<item itemtype="Connector" uid="Connector-3724" startpinid="Node-3723-2" endpinid="Node-171-0" pointList="-180,468,-192,468" />
+
+<item itemtype="Connector" uid="Connector-3761" startpinid="Pcd8544-3576-PinScl" endpinid="Uno-1-3" pointList="-968,76,-968,128,-728,128" />
+
+<item itemtype="Connector" uid="Connector-3762" startpinid="Pcd8544-3576-PinSi" endpinid="Uno-1-4" pointList="-984,76,-984,136,-728,136" />
+
+<item itemtype="Connector" uid="Connector-3763" startpinid="Pcd8544-3576-PinDc" endpinid="Uno-1-5" pointList="-1000,76,-1000,144,-728,144" />
+
+<item itemtype="Connector" uid="Connector-3764" startpinid="Pcd8544-3576-PinCs" endpinid="Uno-1-7" pointList="-1016,76,-1016,160,-728,160" />
+
+<item itemtype="Connector" uid="Connector-3765" startpinid="Pcd8544-3576-PinRst" endpinid="Uno-1-6" pointList="-1032,76,-1032,152,-728,152" />
+
+<item itemtype="Connector" uid="Connector-3768" startpinid="Fixed Voltage-3766-outnod" endpinid="Switch-3767-pinP0" pointList="-1156,176,-1120,176" />
+
+<item itemtype="Connector" uid="Connector-3769" startpinid="Switch-3767-switch0pinN" endpinid="Uno-1-2" pointList="-1088,176,-792,176,-792,120,-728,120" />
+
+</circuit>
