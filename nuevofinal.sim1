@@ -10,7 +10,7 @@
 
 <item itemtype="Ground" CircId="Ground-3618" mainComp="false" Show_id="false" Show_Val="false" Pos="-872,608" rotation="0" hflip="1" vflip="1" label="Ground-3618" idLabPos="-16,8" labelrot="0" valLabPos="0,0" valLabRot="0" />
 
-<item itemtype="SerialPort" CircId="SerialPort-4135" mainComp="false" Show_id="false" Show_Val="false" Pos="-640,312" rotation="0" hflip="1" vflip="1" label="SerialPort-4135" idLabPos="-20,-32" labelrot="0" valLabPos="-16,20" valLabRot="0" Port="COM3" Baudrate="9600 _Bauds" DataBits="8 _Bits" StopBits="1 _Bits" />
+<item itemtype="SerialPort" CircId="SerialPort-4135" mainComp="false" Show_id="false" Show_Val="false" Pos="-640,312" rotation="0" hflip="1" vflip="1" label="SerialPort-4135" idLabPos="-20,-32" labelrot="0" valLabPos="-16,20" valLabRot="0" Port="COM2" Baudrate="9600 _Bauds" DataBits="8 _Bits" StopBits="1 _Bits" />
 
 <item itemtype="opAmp" CircId="opAmp-4215" mainComp="false" Show_id="false" Show_Val="false" Pos="-348,472" rotation="-180" hflip="1" vflip="1" label="opAmp-4215" idLabPos="-16,-32" labelrot="0" valLabPos="0,0" valLabRot="0" Gain="300000" Out_Imped="1e-14 Ω" Volt_Pos="5 V" Volt_Neg="0 V" Power_Pins="false" Switch_Pins="false" />
 
