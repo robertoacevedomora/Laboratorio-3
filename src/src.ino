@@ -188,13 +188,13 @@ void loop()
   
   v_analog2 = analogRead(a_input2); //Valor de tension (0V-5V) del pin analogico A2.  
   v_out2 = (v_analog2* 5.0145) / 1024; 
-  v_in2 = v_out2 / (R2 / (R1 + R2)); 
+  v_in2 = v_out2 / (R2 / (R1 + R2)); //Division de tension
 
-  if (estadoPulsador2 == LOW)       
+  if (estadoPulsador2 == LOW)  //Valor bajo, tension DC        
   {
-    if (Posi_Nega9 == LOW) 
+    if (Posi_Nega9 == LOW) //Valor bajo, tension DC positiva
     {                   
-      if (v_in2 > 24)
+      if (v_in2 > 24) //Si el valor de entrada es mayor a 24, se enciendde el l_led1(Pin 12), de lo contrario el led se mantiene 
       {
         digitalWrite(l_led2, HIGH);
       }
@@ -203,19 +203,19 @@ void loop()
         digitalWrite(l_led2, LOW);
       }
       
-      lcd.setCursor(12, 3); 
+      lcd.setCursor(12, 3); //Valor de tension se muestra en la pantalla LCD 
       lcd.print("V2= ");   
       lcd.print(v_in2); 
       
-      Serial.print("V2 ");
+      Serial.print("V2 ");//Valor de tension se muestra en la pantalla LCD 
       Serial.println(v_in2);
       delay(400);
     }
     else
     {
-      if (Posi_Nega9 == HIGH) 
+      if (Posi_Nega9 == HIGH)  //Valor alto, tension positiva
       {                  
-        if (v_in2*-1 < -24)
+        if (v_in2*-1 < -24)//Si el valor de entrada es menor a -24, se enciendde el l_led1(Pin 12), de lo contrario el led se mantiene apagado
         {
           digitalWrite(l_led2, HIGH);
         }
