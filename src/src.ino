@@ -144,14 +144,16 @@ void loop()
         lcd.setCursor(12, 2); //Valor de la tension negativa se muestra en la pantalla LCD      
         lcd.print("V1 ");     
         lcd.print(v_in3 * -1); 
-        
-        Serial.print("V1 "); //Se envia el dato de la tension DC negativa
-        Serial.println(v_in3 * -1);
+        Serial.print("V1 ");         //Se envia el dato de la tension DC positiva
+        Serial.println(v_in3*-1);
         delay(400);
+        
+        
       }
     }
   }
-
+//Tension AC
+  
   if (estadoPulsador3 == HIGH) //Valor alto, tension AC 
   {
    
@@ -172,11 +174,10 @@ void loop()
       lcd.setCursor(12, 2);    //Valor de la tension Vrms se muestra en la pantalla      
       lcd.print("V1 RMS:");            
       lcd.print(v_rms3 *0.7071); 
+      
 
       //Conexion serial tension AC
-      Serial.print("Vrms1 ");
-      Serial.println(v_rms3 *0.707);
-      delay(400);
+     
     }   
 
 
@@ -233,7 +234,8 @@ void loop()
       }
     }
   }
-
+//Tension AC
+  
   if (estadoPulsador2 == HIGH) 
   {
     //Voltaje mas alto
@@ -253,9 +255,7 @@ void loop()
       lcd.print("V2 RMS:");              
       lcd.print(v_rms2 *0.7071); 
 
-      Serial.print("Vrms2 ");
-      Serial.println(v_rms2*0.707);
-      delay(400);
+      
     }
   }
 
@@ -314,7 +314,7 @@ void loop()
       }
     }
   }
-
+//Tension AC
   if (estadoPulsador1 == HIGH) 
   {
     // Para enocntrar el voltaje mas alto de la senal sinusoidal
@@ -334,9 +334,7 @@ void loop()
       lcd.print("V3 RMS:");              
       lcd.print(v_rms1 *0.7071); 
       
-      Serial.print("Vrms3 ");
-      Serial.println(v_rms1*0.707);
-      delay(400);
+      
     }
   }
 
@@ -410,13 +408,20 @@ void loop()
         digitalWrite(l_led4, LOW);
       }
      
-      delay(400);
+      
     }
      lcd.setCursor(12, 5);           
       lcd.print("V4 rms:");               
       lcd.print(v_rms0*0.7071); 
 
-      Serial.print("Vrms4 ");
+      Serial.print("Vrms Canal 1 ");
+      Serial.println(v_rms3*0.707);
+      Serial.print("Vrms Canal 2 ");
+      Serial.println(v_rms2*0.707);
+      Serial.print("Vrms Canal 3 ");
+      Serial.println(v_rms1*0.707);
+      Serial.print("Vrms Canal 4 ");
       Serial.println(v_rms0*0.707);
+      
   }
 } 
