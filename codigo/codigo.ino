@@ -1,3 +1,4 @@
+
 #include <PCD8544.h> //Incluyo libreria PCD8544
 #include <math.h>
 #include <stdio.h>
@@ -102,7 +103,7 @@ void loop()
   {
     if (Posi_Nega8 == LOW) // Si el voltaje de la fuente es positivo, va positivo.
     {                    // Condiciones de alarma de LED
-      if (v_in3 * 5 > 24)
+      if (v_in3 > 24)
       {
         digitalWrite(l_led, HIGH);
       }
@@ -113,17 +114,17 @@ void loop()
       // Para mostrar en pantalla
       lcd.setCursor(12, 2); // Posicionamos el cursor en el LCD
       lcd.print("V1 = ");   // Mostramos el texto en el LCD
-      lcd.print(v_in3 * 5); // Mostramos el valor del Vin en el LCD
+      lcd.print(v_in3); // Mostramos el valor del Vin en el LCD
       // Pasamos al serial monitor que eventualmente lo pasaremos a un archivo csv
       Serial.print("V1 ");
-      Serial.println(v_in3 * 5);
+      Serial.println(v_in3);
       delay(500);
     }
     else
     {
       if (Posi_Nega8 == HIGH) // Si el voltaje de la fuente es negativo
       {                    // Condiciones de alarma de LED
-        if (v_in3 * -5 < -24)
+        if (v_in3 * -1 < -24)
         {
           digitalWrite(l_led,HIGH);
         }
@@ -134,10 +135,10 @@ void loop()
         // Para mostrar en pantalla
         lcd.setCursor(12, 2);  // Posicionamos el cursor en el LCD
         lcd.print("V1 ");     // Mostramos el texto en el LCD
-        lcd.print(v_in3 * -5); // Mostramos el valor del Vin en el LCD
+        lcd.print(v_in3 * -1); // Mostramos el valor del Vin en el LCD
         // Pasamos al serial monitor que eventualmente lo pasaremos a un archivo csv
         Serial.print("V1 ");
-        Serial.println(v_in3 * -5);
+        Serial.println(v_in3 * -1);
         delay(500);
       }
     }
@@ -149,7 +150,7 @@ void loop()
     if (v_in3 > v_rms3)
     {
       v_rms3 = v_in3;
-      if (v_rms3*5*0.7071 > 17)
+      if (v_rms3*0.7071 > 17)
       {
         digitalWrite(l_led, HIGH);
       }
@@ -162,7 +163,7 @@ void loop()
      // Seteamos en la pantalla LCD
       lcd.setCursor(12, 2);            // Posicionamos el cursor en el LCD
       lcd.print("V1 RMS:");               // Mostramos el texto en el LCD
-      lcd.print(5 * v_rms3 *0.7071); // Al voltaje mas alto le colocamos la formula de Voltaje RMS -> Vp/sqrt(2)
+      lcd.print(v_rms3 *0.7071); // Al voltaje mas alto le colocamos la formula de Voltaje RMS -> Vp/sqrt(2)
       // Pasamos al serial monitor que eventualmente lo pasaremos a un archivo csv
       //Serial.print("Vrms1 ");
       //Serial.println(5 * Vrms5 / sqrt(2));
@@ -172,8 +173,8 @@ void loop()
 
 
   // CANAL 2 
-  // Selectores Negativo/positivo de la senal DC
-  Posi_Nega9 = digitalRead(d_input9); // leemos el pin digital 2 reconocido como PIN_2
+
+  Posi_Nega9 = digitalRead(d_input9); // Revisamos si la tension es positiva o negativa
   bool estadoPulsador2 = digitalRead(2); // leemos el pin digital 13, voltaje para seleccionar entre AC/DC
   // Establecer lecturas de los pines analogicos y guardarlos en las variables value_n
   v_analog2 = analogRead(a_input2); // Leemos el pin analógico A0
