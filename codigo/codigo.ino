@@ -14,8 +14,8 @@ int a_input0 = 0;             //int analogInput0 = 0; // PIN A0
 // LEDS de aviso conectados a cada pin numerado
 int l_led1 = 12; // Alarma para canal 1
 int l_led2 = 13; // Alarma para canal 2
-int l_led3 = 4;
-int l_led4 = 5;
+int l_led3 = 18;
+int l_led4 = 19;
 // Variables para el circuito
 float R1 = 25000.0;  //  R1 (200K) Valor de la resistencia R1 del divisor de tension
 float R2 = 5000.0; //  R2 (1M) Valor de la resistencia R2 del divisor de tension
@@ -72,7 +72,7 @@ void setup()
   pinMode(a_input0, INPUT); // Activamos el input del pin analógico A0
 
   // Declaracion de puertos de entrada para trabajar en modo digital
-  pinMode(7, INPUT);     
+  pinMode(2, INPUT);     
   pinMode(d_input8, INPUT);  // Pin2 como entrada, ahora es 8
   pinMode(d_input9, INPUT);  // Pin1 como entrada, ahora es 9
   pinMode(d_input10, INPUT); // Pin8 como entrada, ahora es 10
@@ -188,7 +188,7 @@ void loop()
   {
     if (Posi_Nega9 == LOW) // Si el voltaje de la fuente es positivo
     {                    // Condiciones de alarma de LED
-      if (v_in2 * 5 > 24)
+      if (v_in2 > 24)
       {
         digitalWrite(l_led2, HIGH);
       }
@@ -209,7 +209,7 @@ void loop()
     {
       if (Posi_Nega9 == HIGH) // Si el voltaje de la fuente es negativo
       {                    // Condiciones de alarma de LED
-        if (v_in2 * -5 < -24)
+        if (v_in2*-1 < -24)
         {
           digitalWrite(l_led2, HIGH);
         }
@@ -269,7 +269,7 @@ void loop()
   {
     if (Posi_Nega10 == LOW) // Si el voltaje de la fuente es positivo
     {                    // Condiciones de alarma de LED
-      if (v_in1 * 5 > 24)
+      if (v_in1  > 24)
       {
         digitalWrite(l_led3, HIGH);
       }
@@ -290,7 +290,7 @@ void loop()
     {
       if (Posi_Nega10 == HIGH) // Si el voltaje de la fuente es negativo
       {                    // Condiciones de alarma de LED
-        if (v_in1 * -5 < -24)
+        if (v_in1 * -1 < -24)
         {
           digitalWrite(l_led3, HIGH);
         }
@@ -350,7 +350,7 @@ void loop()
   {
     if (Posi_Nega11 == LOW) // Si el voltaje de la fuente es positivo
     {                    // Condiciones de alarma de LED
-      if (v_in0 * 5 > 24)
+      if (v_in0  > 24)
       {
         digitalWrite(l_led4, HIGH);
       }
@@ -372,7 +372,7 @@ void loop()
     {
       if (Posi_Nega11 == HIGH) // Si el voltaje de la fuente es negativo
       {                    // Condiciones de alarma de LED
-        if (v_in0 * -5 < -24)
+        if (v_in0 * -1 < -24)
         {
           digitalWrite(l_led4, HIGH);
         }
