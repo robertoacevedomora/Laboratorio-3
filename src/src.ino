@@ -35,10 +35,10 @@ byte d_input11 = 11;    // Canal 4
 
 //Entrada positiva o negativa
 
-byte Posi_Nega8 = 0; //byte SelectorNP = 0; // Variable recibe dato de un comparador, para detectar si es negativo o positivo V.
-byte Posi_Nega9 = 0; 
-byte Posi_Nega10 = 0; // Variable recibe dato de un comparador, para detectar si es negativo o positivo V.
-byte Posi_Nega11 = 0; // Variable recibe dato de un comparador, para detectar si es negativo o positivo V.
+byte Posi_Nega8 = 0;   //Byte selector positivo o negativo canal 1, pin digital 8
+byte Posi_Nega9 = 0;   //Byte selector positivo o negativo canal 2, pin digital 9
+byte Posi_Nega10 = 0;  //Byte selector positivo o negativo canal 3, pin digital 10
+byte Posi_Nega11 = 0;  //Byte selector positivo o negativo canal 4, pin digital 11
 
 //Variables Vrms
 
@@ -63,15 +63,10 @@ float v_in0 = 0; //Canal 4
 //float v_in0 = 0.0;    // Definimos la variable Vin
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 //Esta invertido, canal 4 =3, canal 2 =2, canal 1 =3 y canal 0 = 1.
-
-
-
-
-
 void setup()
 {
  
-   pinMode(2, INPUT);  
+ 
   // Declaracion de puertos de entrada
   pinMode(a_input3, INPUT); // Activamos el input del pin analógico A3
   pinMode(a_input2, INPUT); // Activamos el input del pin analógico A2
@@ -79,24 +74,25 @@ void setup()
   pinMode(a_input0, INPUT); // Activamos el input del pin analógico A0
 
   // Declaracion de puertos de entrada para trabajar en modo digital    
-  pinMode(d_input8, INPUT);  // Pin8 como entrada
-  pinMode(d_input9, INPUT);  // Pin9 como entrada
-  pinMode(d_input10, INPUT); // Pin10 como entrada
-  pinMode(d_input11, INPUT); // Pin11 como entrada
+  pinMode(d_input8, INPUT);  // Pin digital 8 como entrada
+  pinMode(d_input9, INPUT);  // Pin digital 9 como entrada
+  pinMode(d_input10, INPUT); // Pin digital 10 como entrada
+  pinMode(d_input11, INPUT); // Pin digital 11 como entrada
 
   // Ajustes del display
-  lcd.begin(84, 48); // LCD ON
+  lcd.begin(84, 48);       // LCD ON
   lcd.print("Voltimetro");
-  lcd.setCursor(15, 1); // LCD
+  lcd.setCursor(15, 1);    // LCD
   lcd.print("Canales 4");
   
   //Pines LED como salidas
-  pinMode(l_led1, OUTPUT);
+  pinMode(l_led1, OUTPUT); 
   pinMode(l_led2, OUTPUT);
   pinMode(l_led3, OUTPUT);
   pinMode(l_led4, OUTPUT);
 
-  Serial.begin(9600); 
+  Serial.begin(9600); //Velocidad a la que se establece la omunicacion serial, en python tambien va 9600.
+  pinMode(2, INPUT);  //Entrada para el swirch AC/DC 
 
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -104,19 +100,19 @@ void loop()
 {
   
 //Canal 1
-  Posi_Nega8 = digitalRead(d_input8); 
-  bool estadoPulsador3 = digitalRead(2); 
+  Posi_Nega8 = digitalRead(d_input8); //Selector tension positiva o negativa
+  bool estadoPulsador3 = digitalRead(2); //Selector AC/DC
  
-  v_analog3 = analogRead(a_input3);
-  
+  v_analog3 = analogRead(a_input3); //Valor de tension (0V-5V) del pin analogico A3. 
   v_out3 = (v_analog3* 5.0145) / 1024; 
-  v_in3 = v_out3 / (R2 / (R1 + R2));  
-  if (estadoPulsador3 == LOW)        
+  v_in3 = v_out3 / (R2 / (R1 + R2));  //Division de tension 
+
+  if (estadoPulsador3 == LOW)         //Valor bajo, tension DC    
   {
-    if (Posi_Nega8 == LOW) 
+    if (Posi_Nega8 == LOW)            //Valor bajo, tension DC positiva  
     {                    
-      if (v_in3 > 24)
-      {
+      if (v_in3 > 24)                 //Si el valor de entrada es mayor a 24, se enciendde el l_led1(Pin 12), de lo contrario el led se mantiene apagado
+      {                               
         digitalWrite(l_led1, HIGH);
       }
       else
@@ -124,19 +120,19 @@ void loop()
         digitalWrite(l_led1, LOW);
       }
       
-      lcd.setCursor(12, 2); 
+      lcd.setCursor(12, 2);         //Valor de tension se muestra en la pantalla LCD 
       lcd.print("V1 = ");   
       lcd.print(v_in3); 
       
-      Serial.print("V1 ");
+      Serial.print("V1 ");         //Se envia el dato de la tension DC positiva
       Serial.println(v_in3);
-      delay(500);
+      delay(400);
     }
     else
     {
-      if (Posi_Nega8 == HIGH) 
+      if (Posi_Nega8 == HIGH) //Valor alto, tension positiva
       {                    
-        if (v_in3 * -1 < -24)
+        if (v_in3 * -1 < -24) //Si el valor de entrada es menor a -24, se enciendde el l_led1(Pin 12), de lo contrario el led se mantiene apagado
         {
           digitalWrite(l_led1,HIGH);
         }
@@ -145,26 +141,26 @@ void loop()
           digitalWrite(l_led1, LOW);
         }
         
-        lcd.setCursor(12, 2);  
+        lcd.setCursor(12, 2); //Valor de la tension negativa se muestra en la pantalla LCD      
         lcd.print("V1 ");     
         lcd.print(v_in3 * -1); 
         
-        Serial.print("V1 ");
+        Serial.print("V1 "); //Se envia el dato de la tension DC negativa
         Serial.println(v_in3 * -1);
-        delay(500);
+        delay(400);
       }
     }
   }
 
-  if (estadoPulsador3 == HIGH) 
+  if (estadoPulsador3 == HIGH) //Valor alto, tension AC 
   {
    
-    if (v_in3 > v_rms3)
+    if (v_in3 > v_rms3)       //Se toma el valor mas alto de la tension, posteriormente se multiplica por 0.707 para obtener Vrms
     {
       v_rms3 = v_in3;
-      if (v_rms3*0.7071 > 17)
+      if (v_rms3*0.707 > 17) //Llevamos a cabo la multiplicacion 24*0.707 = 16.96, asi nos damos cuenta si sobrepaso el limite de 24V.
       {
-        digitalWrite(l_led1, HIGH);
+        digitalWrite(l_led1, HIGH); //Si es mayor a 17, encedemos el led de lo contrario se mantiene apagado.
       }
       else
       {
@@ -173,23 +169,26 @@ void loop()
      
     }
     
-      lcd.setCursor(12, 2);          
+      lcd.setCursor(12, 2);    //Valor de la tension Vrms se muestra en la pantalla      
       lcd.print("V1 RMS:");            
       lcd.print(v_rms3 *0.7071); 
-     
-  }
+
+      //Conexion serial tension AC
+      Serial.print("Vrms1 ");
+      Serial.println(v_rms3 *0.707);
+      delay(400);
+    }   
 
 
+// CANAL 2
 
-  // CANAL 2 
-
-  Posi_Nega9 = digitalRead(d_input9); 
-  bool estadoPulsador2 = digitalRead(2); 
+  Posi_Nega9 = digitalRead(d_input9); //Selector tension positiva o negativa
+  bool estadoPulsador2 = digitalRead(2); //Selector AC/DC 
   
-  v_analog2 = analogRead(a_input2); 
-  
+  v_analog2 = analogRead(a_input2); //Valor de tension (0V-5V) del pin analogico A2.  
   v_out2 = (v_analog2* 5.0145) / 1024; 
-  v_in2 = v_out2 / (R2 / (R1 + R2));  
+  v_in2 = v_out2 / (R2 / (R1 + R2)); 
+
   if (estadoPulsador2 == LOW)       
   {
     if (Posi_Nega9 == LOW) 
@@ -209,7 +208,7 @@ void loop()
       
       Serial.print("V2 ");
       Serial.println(v_in2);
-      delay(500);
+      delay(400);
     }
     else
     {
@@ -230,7 +229,7 @@ void loop()
         
         Serial.print("V2 ");
         Serial.println(v_in2 * -1);
-        delay(500);
+        delay(400);
       }
     }
   }
@@ -253,24 +252,24 @@ void loop()
       lcd.setCursor(12, 3);         
       lcd.print("V2 RMS:");              
       lcd.print(v_rms2 *0.7071); 
-     
-      //Serial.print("Vrms2: ");
-      //Serial.println(Vrms4);
-      //delay(500);
+
+      Serial.print("Vrms2 ");
+      Serial.println(v_rms2*0.707);
+      delay(400);
     }
   }
+
+
+
+// Canal 3
   
-  
-  
-  // Canal 3
-  //Positov o negativo
-  Posi_Nega10 = digitalRead(d_input10); 
-  bool estadoPulsador1 = digitalRead(2); 
+  Posi_Nega10 = digitalRead(d_input10); //Selector tension positiva o negativa
+  bool estadoPulsador1 = digitalRead(2); //Selector AC/DC
  
-  v_analog1 = analogRead(a_input1); 
-  
+  v_analog1 = analogRead(a_input1); //Valor de tension (0V-5V) del pin analogico A1. 
   v_out1 = (v_analog1 * 5.0145) / 1024; 
-  v_in1 = v_out1 / (R2 / (R1 + R2));  
+  v_in1 = v_out1 / (R2 / (R1 + R2)); 
+
   if (estadoPulsador1 == LOW)        
   {
     if (Posi_Nega10 == LOW) 
@@ -290,7 +289,7 @@ void loop()
      
       Serial.print("V3 ");
       Serial.println(v_in1);
-      delay(500);
+      delay(400);
     }
     else
     {
@@ -311,7 +310,7 @@ void loop()
         
         Serial.print("V3 ");
         Serial.println(v_in1 * -1);
-        delay(500);
+        delay(400);
       }
     }
   }
@@ -334,23 +333,23 @@ void loop()
       lcd.setCursor(12, 4);           
       lcd.print("V3 RMS:");              
       lcd.print(v_rms1 *0.7071); 
-     //Serial prueba
-      //Serial.print("Vrms3: ");
-      //Serial.println(Vrms2);
-      //delay(500);
+      
+      Serial.print("Vrms3 ");
+      Serial.println(v_rms1*0.707);
+      delay(400);
     }
   }
-  
-  
-  
+
+
+
   // Canal 4
-  Posi_Nega11 = digitalRead(d_input11); 
-  bool estadoPulsador0 = digitalRead(2); 
+  Posi_Nega11 = digitalRead(d_input11); //Selector tension positiva o negativa 
+  bool estadoPulsador0 = digitalRead(2); //Selector AC/DC
   
-  v_analog0 = analogRead(a_input0); 
- 
+  v_analog0 = analogRead(a_input0);  //Valor de tension (0V-5V) del pin analogico A0. 
   v_out0 = (v_analog0 * 5.0145) / 1024; 
   v_in0 = v_out0 / (R2 / (R1 + R2));  
+
   if (estadoPulsador0 == LOW)        
   {
     if (Posi_Nega11 == LOW) 
@@ -369,8 +368,8 @@ void loop()
       lcd.print(v_in0);
     
       Serial.print("V4 ");
-      Serial.print(v_in0 * 5);
-      delay(500);
+      Serial.print(v_in0);
+      delay(400);
     }
     else
     {
@@ -391,7 +390,7 @@ void loop()
         
         Serial.print("V4 ");
         Serial.println(v_in0 * -1);
-        delay(500);
+        delay(400);
      }
     }
   }
@@ -411,22 +410,13 @@ void loop()
         digitalWrite(l_led4, LOW);
       }
      
-      delay(500);
+      delay(400);
     }
      lcd.setCursor(12, 5);           
       lcd.print("V4 rms:");               
       lcd.print(v_rms0*0.7071); 
-  }
-   if (estadoPulsador0 == HIGH)
-   {
-      Serial.print("Vrms1 ");
-      Serial.println(v_rms3 / sqrt(2));
-      Serial.print("Vrms2 ");
-      Serial.println(v_rms2*0.7071);
-      Serial.print("Vrms3 ");
-      Serial.println(v_rms1*0.7071);
-      Serial.print("Vrms4 ");
-      Serial.println(v_rms0*0.7071);
-   }
 
+      Serial.print("Vrms4 ");
+      Serial.println(v_rms0*0.707);
+  }
 } 
