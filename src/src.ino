@@ -1,3 +1,7 @@
+//Laboratorio de Microcontroladores
+//Laboratorio 3
+//Arduino: GPIO,ADC y comunicaciones
+
 #include <PCD8544.h> //Incluyo libreria PCD8544
 #include <math.h>
 #include <stdio.h>
@@ -236,7 +240,7 @@ void loop()
   }
 //Tension AC
   
-  if (estadoPulsador2 == HIGH) 
+  if (estadoPulsador2 == HIGH)  //Valor alto, tension AC 
   {
     //Voltaje mas alto
     if (v_in2 > v_rms2)
@@ -268,11 +272,11 @@ void loop()
  
   v_analog1 = analogRead(a_input1); //Valor de tension (0V-5V) del pin analogico A1. 
   v_out1 = (v_analog1 * 5.0145) / 1024; 
-  v_in1 = v_out1 / (R2 / (R1 + R2)); 
+  v_in1 = v_out1 / (R2 / (R1 + R2)); //Division de tension 
 
-  if (estadoPulsador1 == LOW)        
+  if (estadoPulsador1 == LOW)   //Valor bajo, tension DC  
   {
-    if (Posi_Nega10 == LOW) 
+    if (Posi_Nega10 == LOW)  //Valor bajo, tension DC positiva  
     {                   
       if (v_in1  > 24)
       {
@@ -293,7 +297,7 @@ void loop()
     }
     else
     {
-      if (Posi_Nega10 == HIGH) 
+      if (Posi_Nega10 == HIGH)  //Valor alto, tension DC negativa  
       {                    
         if (v_in1 * -1 < -24)
         {
@@ -346,11 +350,11 @@ void loop()
   
   v_analog0 = analogRead(a_input0);  //Valor de tension (0V-5V) del pin analogico A0. 
   v_out0 = (v_analog0 * 5.0145) / 1024; 
-  v_in0 = v_out0 / (R2 / (R1 + R2));  
+  v_in0 = v_out0 / (R2 / (R1 + R2));   //Division de tension 
 
-  if (estadoPulsador0 == LOW)        
+  if (estadoPulsador0 == LOW)       //Valor bajo, tension DC   
   {
-    if (Posi_Nega11 == LOW) 
+    if (Posi_Nega11 == LOW)       //Valor bajo, tension DC positiva  
     {                   
       if (v_in0  > 24)
       {
@@ -371,7 +375,7 @@ void loop()
     }
     else
     {
-      if (Posi_Nega11 == HIGH) 
+      if (Posi_Nega11 == HIGH)        //Valor alto, tension DC positiva  
       {                   
         if (v_in0 * -1 < -24)
         {
@@ -410,10 +414,10 @@ void loop()
      
       
     }
-     lcd.setCursor(12, 5);           
+      lcd.setCursor(12, 5);            
       lcd.print("V4 rms:");               
       lcd.print(v_rms0*0.7071); 
-
+      //Instrucciones para imprimir resultados de tension AC
       Serial.print("Vrms Canal 1 ");
       Serial.println(v_rms3*0.707);
       Serial.print("Vrms Canal 2 ");
